@@ -10,16 +10,23 @@
   </head>
   <body>
     <canvas id="first-canvas"></canvas>
+    <canvas id="second-canvas"></canvas>
     <script src="js/constants.js"></script>
     <script src="js/Ball.js"></script>
     <script src="js/BallCollision.js"></script>
     <script>
       new BallCollision({
         id: "first-canvas",
-        // width: 800,
-        // height: 600,
-        numOfBalls: 10,
-        availableColors: ["red", "blue", "yellow", "orange", "black", "green"]
+        width: 600,
+        height: 600,
+        numOfBalls: 50,
+        colors: ["teal", "pink", "salmon"]
+      });
+      new BallCollision({
+        id: "second-canvas",
+        width: 400,
+        height: 400,
+        numOfBalls: 50
       });
     </script>
   </body>
