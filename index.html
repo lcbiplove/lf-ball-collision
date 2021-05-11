@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ball collision</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <canvas id="first-canvas"></canvas>
+    <script src="js/constants.js"></script>
+    <script src="js/Ball.js"></script>
+    <script src="js/BallCollision.js"></script>
+    <script>
+      new BallCollision({
+        id: "first-canvas",
+        // width: 800,
+        // height: 600,
+        numOfBalls: 10,
+        availableColors: ["red", "blue", "yellow", "orange", "black", "green"]
+      });
+    </script>
+  </body>
 </html>
