@@ -6,7 +6,7 @@ function BallCollision(props) {
 
   this.numOfBalls = props.numOfBalls || DEFAULT_NUM_OF_BALLS;
   this.colors = props.colors || DEFAULT_COLORS;
-  console.log(this.colors);
+
   this.balls = [];
   this.ballSizes = props.ballSizes || DEFAULT_BALL_SIZES;
 
@@ -15,14 +15,18 @@ function BallCollision(props) {
 
   const balls = [];
 
-  for (let ind = 0; ind < this.numOfBalls; ind++) {
-    const x = Math.random() * this.width;
-    const y = Math.random() * this.height;
+  const randomPosition = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
 
+  for (let ind = 0; ind < this.numOfBalls; ind++) {
     const color = this.colors[ind % this.colors.length];
     const radius = this.ballSizes[ind % this.ballSizes.length];
 
-    radius / balls.push(new Ball(x, y, radius, color, this.context));
+    const x = randomPosition(radius, this.width - radius);
+    const y = randomPosition(radius, this.height - radius);
+
+    balls.push(new Ball(x, y, radius, color, this.context));
   }
 
   this.balls = balls;

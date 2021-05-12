@@ -2,7 +2,7 @@ function Ball(x, y, radius, color, context) {
   this.x = x;
   this.y = y;
 
-  this.radius = !radius ? DEFAULT_RADIUS : radius;
+  this.radius = radius;
   this.speed = {
     x: (Math.random() - 0.75) * 8,
     y: (Math.random() - 0.75) * 8
