@@ -1,6 +1,6 @@
 # Ball Collision
 
-##### It is the ant smasher program written in js based on canvas
+##### It is the ball collision program written in js based on canvas
 
 * [Demo](https://lcbiplove.github.io/lf-ball-collision/)
 
